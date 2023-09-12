@@ -1,3 +1,13 @@
+/**
+ * @file Vector.h
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2023-09-12
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #ifndef VECTOR_H
 #define VECTOR_H
 #include <iostream>
@@ -14,8 +24,8 @@ public:
     // allocating storage using dynamic allocation, and
     // sets all elements to 0
     Vector(int size);
-    int size();
-    int capacity();
+    int size() const;
+    int capacity() const;
     // Adds an element to the end
     void push_back(int n);
     void pop_back();
@@ -23,11 +33,11 @@ public:
     //specified by index
     int& operator[](int index);
     //Display vector, its capasity and size
-    void print();
+    virtual void print() const;
     // Free/release any dynamic memory
     ~Vector();
 
-private:
+protected:
     int *mElements;
     int mSize;
     int mCapacity;
