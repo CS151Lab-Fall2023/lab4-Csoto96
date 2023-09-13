@@ -12,11 +12,6 @@ public:
     void fillWith2();
     ~NewVector();
     void print() const;
-
-private:
-    int *mElements;
-    int mSize;
-    int mCapacity;
 };
 
 #endif // NEWVECTOR_H
